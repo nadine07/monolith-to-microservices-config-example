@@ -1,0 +1,18 @@
+server:
+  port : 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customers
+          predicates:
+            - Path=/customers/
+          uri: localhost:8083
+        - id: veterinaries
+          predicates:
+            - Path=/veterinaries/
+          uri: localhost:8081
+        - id : visits-server
+          predicates:
+            - Path=/visits/
+          uri: localhost:8082
