@@ -16,3 +16,8 @@ spring:
           predicates:
             - Path=/visits/**
           uri: http://localhost:8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-server:8761
